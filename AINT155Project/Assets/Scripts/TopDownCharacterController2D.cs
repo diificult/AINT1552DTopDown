@@ -20,5 +20,6 @@ public class TopDownCharacterController2D: MonoBehaviour {
         rigidbody2D.velocity = velocity * speed;
 
         rigidbody2D.angularVelocity = 0.0f;
-    }
+    }
+
 }
