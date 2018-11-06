@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 114048625987255632}
   - component: {fileID: 114093507679734968}
   - component: {fileID: 114281852822984834}
+  - component: {fileID: 114675937111900232}
+  - component: {fileID: 114541738297878744}
+  - component: {fileID: 114882638282413208}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -70,10 +73,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7432d7282f814ee42917f7134367697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
   onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114675937111900232}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114882638282413208}
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onDamaged:
@@ -81,6 +105,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  health: 10
+  maxHealable: 10
+  healthpacks: 3
+  healthHeals: 3
 --- !u!114 &114093507679734968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 3
 --- !u!114 &114281852822984834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,6 +136,69 @@ MonoBehaviour:
   target: {fileID: 0}
   smoothing: 5
   adjustmentAngle: -90
+--- !u!114 &114541738297878744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232fee44ce7acad4993d7a7190e7a2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114093507679734968}
+        m_MethodName: SetTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114281852822984834}
+        m_MethodName: SetTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: EnemySpawnedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &114675937111900232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45cf20765ba0b74097f1d47fd5a8c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 1382028876249560, guid: d4a2218fa18ecb44aac742039ac8afd9,
+    type: 2}
+  adjustmentAngle: 90
+--- !u!114 &114882638282413208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5d0b3426d96904ab74e26125099898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212675039864489162
 SpriteRenderer:
   m_ObjectHideFlags: 1

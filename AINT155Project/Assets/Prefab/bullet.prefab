@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5000
-  damage: 2
+  damage: 1
 --- !u!212 &212642385449191416
 SpriteRenderer:
   m_ObjectHideFlags: 1
