@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AINT155Project", "AINT155Project.csproj", "{76B1411B-52B4-C0D9-957D-06DBE7C5017B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AINT155Project.Editor", "AINT155Project.Editor.csproj", "{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AINT155Project.Editor", "AINT155Project.Editor.csproj", "{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}"
 EndProject
@@ -21,12 +21,11 @@ Global
 		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F3F41CD-59E4-6E61-0EFC-B1C1A7E0575A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {566BDA0F-6C0B-4CF5-AA32-F8420542AFDF}
 	EndGlobalSection
 EndGlobal
