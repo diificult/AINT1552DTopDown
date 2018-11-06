@@ -7,9 +7,17 @@ using UnityEngine.Events;
 public class OnDamagedEvent : UnityEvent<int> { }
 
 public class HealthSystem : MonoBehaviour {
-    public int health = 10;
+    
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
+
+    public int health = 10;
+    public int maxHealable = 10;
+    public int healthpacks = 3;
+    public int healthHeals = 3;
+
+
+
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -17,6 +25,15 @@ public class HealthSystem : MonoBehaviour {
         if (health < 1)
         {
             onDie.Invoke();
+        }
+    }
+
+    public  void UseHealthPack()
+    {
+        health += healthHeals;
+        while (health > maxHealable)
+        {
+            health--;
         }
     }
 }

@@ -27,6 +27,7 @@ public class Weapon : MonoBehaviour {
         Instantiate(bulletPrefab, bulletSpawn2.position, bulletSpawn2.rotation);
         bulletFire1.enabled = true;
         bulletFire2.enabled = true;
+        GetComponent<AudioSource>().Play();
         Invoke("TurnOffLight", 0.05f);
         Invoke("SetFiring", fireTime);
     }
