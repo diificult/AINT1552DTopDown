@@ -354,11 +354,24 @@
       <Project>{76B1411B-52B4-C0D9-957D-06DBE7C5017B}</Project>
       <Name>AINT155Project</Name>
     </ProjectReference>
+    <ProjectReference Include="AINT155Project.csproj">
+      <Project>{76B1411B-52B4-C0D9-957D-06DBE7C5017B}</Project>
+      <Name>AINT155Project</Name>
+    </ProjectReference>
+    <ProjectReference Include="AINT155Project.csproj">
+      <Project>{76B1411B-52B4-C0D9-957D-06DBE7C5017B}</Project>
+      <Name>AINT155Project</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\CMWaveform.compute" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\CMWaveform.shader" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\StdLib.hlsl" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\ReleaseNotes.txt" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\license.txt" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />

@@ -234,32 +234,86 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>Library\UnityAssemblies\UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>Library\UnityAssemblies\UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>Library\UnityAssemblies\UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\UnityAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>Library\UnityAssemblies\UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -294,31 +348,78 @@
     <Reference Include="Boo.Lang">
       <HintPath>Library\UnityAssemblies\Boo.Lang.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll</HintPath>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\DestroyOnDie.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\HealthSystem.cs" />
-    <Compile Include="Assets\Scripts\MouseControl2D.cs" />
-    <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
-    <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
-    <Compile Include="Assets\Scripts\SmoothLookAtTarget2D.cs" />
-    <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\TimerEvent.cs" />
-    <Compile Include="Assets\Scripts\TopDownCharacterController2D.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineBrainEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineClearShotEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineColliderEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineComposerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineConfinerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineExternalCameraEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineFramingTransposerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineFreeLookEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineGroupComposerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineHardLockToTargetEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineHardLookAtEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineMixingCameraEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineNoiseSettingsEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineOrbitalTransposerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachinePathEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachinePOVEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineSameAsFollowTargetEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineScreenComposerGuides.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineSmoothPathEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineStateDrivenCameraEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineStoryboardEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineTargetGroupEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineTrackedDollyEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineTransposerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineVirtualCameraBaseEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Editors\CinemachineVirtualCameraEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\EventHelpers\CinemachineTriggerActionEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineCollisionImpulseSourceEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseChannelPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseChannels.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseDefinitionPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseEnvelopePropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseListenerEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Impulse\CinemachineImpulseSourceEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Menus\CinemachineMenu.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\AxisStatePropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\CinemachineBlendDefinitionPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\CinemachineTagFieldPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\EmbeddedAssetPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\LensSettingsPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\MinDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\NoiseSettingsPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\PropertyDrawers\OrbitalTransposerHeadingPropertyDrawer.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Timeline\CinemachineShotEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\BaseEditor.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\CinemachineLensPresets.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\EmbeddedAssetHelpers.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\InspectorUtility.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\ReflectionHelpers.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\SaveDuringPlay.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\ScriptableObjectUtility.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Utility\SerializedPropertyHelper.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Windows\AboutWindow.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Windows\CinemachineColliderPrefs.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Windows\CinemachineSettings.cs" />
+    <Compile Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Windows\WaveformWindow.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\CMWaveform.compute" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\CMWaveform.shader" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\Editor\Resources\StdLib.hlsl" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\ReleaseNotes.txt" />
+    <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.7\license.txt" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\ohowarth\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
