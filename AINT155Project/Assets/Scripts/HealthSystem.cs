@@ -12,9 +12,6 @@ public class HealthSystem : MonoBehaviour {
     public OnDamagedEvent onDamaged;
 
     public int health = 10;
-    public int maxHealable = 10;
-    public int healthpacks = 3;
-    public int healthHeals = 3;
 
 
 
@@ -22,18 +19,11 @@ public class HealthSystem : MonoBehaviour {
     {
         health -= damage;
         onDamaged.Invoke(health);
+
         if (health < 1)
         {
             onDie.Invoke();
         }
     }
 
-    public  void UseHealthPack()
-    {
-        health += healthHeals;
-        while (health > maxHealable)
-        {
-            health--;
-        }
-    }
 }
