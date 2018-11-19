@@ -2,11 +2,11 @@ fileFormatVersion: 2
 guid: 0548a738c1e482c48bdddc7e09004110
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Tilesheet_0
-    21300002: Tilesheet_1
-    21300004: Tilesheet_2
-    21300006: Tilesheet_3
-    21300008: Tilesheet_4
+    21300000: Stone_Floor
+    21300002: Lab_Floor
+    21300004: White
+    21300006: Sand_Floor
+    21300008: Rock_Obstacle
     21300010: Tilesheet_5
     21300012: Tilesheet_6
     21300014: Tilesheet_7
@@ -295,7 +295,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -349,7 +349,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tilesheet_0
+      name: Stone_Floor
       rect:
         serializedVersion: 2
         x: 0
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilesheet_1
+      name: Lab_Floor
       rect:
         serializedVersion: 2
         x: 64
@@ -389,7 +389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilesheet_2
+      name: White
       rect:
         serializedVersion: 2
         x: 128
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilesheet_3
+      name: Sand_Floor
       rect:
         serializedVersion: 2
         x: 192
@@ -429,7 +429,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilesheet_4
+      name: Rock_Obstacle
       rect:
         serializedVersion: 2
         x: 256
