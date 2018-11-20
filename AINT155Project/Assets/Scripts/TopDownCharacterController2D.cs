@@ -39,8 +39,8 @@ public class TopDownCharacterController2D : MonoBehaviour {
             speed = 7f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
 
         Vector2 velocity = new Vector2(x, y).normalized;
 

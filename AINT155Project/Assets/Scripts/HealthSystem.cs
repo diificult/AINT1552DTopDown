@@ -11,13 +11,12 @@ public class HealthSystem : MonoBehaviour {
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
 
-    public int health = 3;
-
-
+    public int health = 100;
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+
+            health -= damage;
         onDamaged.Invoke(health);
 
         if (health < 1)

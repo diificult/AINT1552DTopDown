@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour {
     public Slider HealthBar;
+    public Slider ShieldBar;    
     public Text ScoreText;
     public Text KillsText;
 
@@ -14,6 +15,7 @@ public class GameUI : MonoBehaviour {
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
+        Player.OnUpdateShield += UpdateShieldBar;
         AddScore.OnSendScore += UpdateScore;
         AddScore.OnSendKill += UpdateKill;
 
@@ -22,6 +24,7 @@ public class GameUI : MonoBehaviour {
     private void OnDisable()
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
+        Player.OnUpdateShield -= UpdateShieldBar;
         AddScore.OnSendScore -= UpdateScore;
         AddScore.OnSendKill -= UpdateKill;
     }
@@ -29,6 +32,11 @@ public class GameUI : MonoBehaviour {
     private void UpdateHealthBar(int health)
     {
         HealthBar.value = health;
+    }
+
+    private void UpdateShieldBar(int shield)
+    {
+        ShieldBar.value = shield;
     }
 
     private void UpdateScore(int score)
