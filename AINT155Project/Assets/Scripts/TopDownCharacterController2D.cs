@@ -5,6 +5,7 @@ using UnityEngine;
 public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 7.0f;
+    public float sprintSpeed = 10f;
     Rigidbody2D rigidbody2D;
     public int StartStamina = 50;
     public int CurrentStamina;
@@ -21,16 +22,20 @@ public class TopDownCharacterController2D : MonoBehaviour {
     {
 
        
-        if (Input.GetKey(KeyCode.LeftShift) && CurrentStamina > 0 &&  !isCooldown)
+        if (Input.GetKey(KeyCode.LeftShift) && CurrentStamina > 0 && !isCooldown)
         {
             CurrentStamina--;
-            speed = 10f;
-        } else if ((Input.GetKey(KeyCode.LeftShift) && CurrentStamina == 0)  || (Input.GetKeyUp(KeyCode.LeftShift) && CurrentStamina <10) ) {
+            speed = sprintSpeed;
+        } else if ((Input.GetKey(KeyCode.LeftShift) && CurrentStamina == 0 &&   !isCooldown)  || (Input.GetKeyUp(KeyCode.LeftShift) && CurrentStamina <50) ) {
             Invoke("StaminaCooldown", CooldownTime);
+            speed = 7f;
             isCooldown = true;
         } else
         {
-            CurrentStamina++;
+            if (CurrentStamina < StartStamina)
+            {
+                CurrentStamina++;
+            }
             speed = 7f;
         }
 
@@ -48,7 +53,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
 
     private void StaminaCooldown()
     {
-        isCooldown = true;
+        isCooldown = false;
 
     }
    

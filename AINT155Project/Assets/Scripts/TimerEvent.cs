@@ -5,22 +5,22 @@ using UnityEngine.Events;
 
 public class TimerEvent : MonoBehaviour {
 
-    public float time = 1;
-    public bool repeat = false;
     public UnityEvent onTimerComplete;
-    private void Start()
+
+    public bool  isSpawning  = false;
+
+    void Update()
     {
-        if (repeat)
+        if (!isSpawning)
         {
-            InvokeRepeating("OnTimerComplete", 0, time);
-        }
-        else
-        {
+            isSpawning = true;
+            float time = Random.Range(0.5f, 5.0f);
             Invoke("OnTimerComplete", time);
         }
     }
     private void OnTimerComplete()
     {
         onTimerComplete.Invoke();
-    }
+        isSpawning = false;
+    }
 }
