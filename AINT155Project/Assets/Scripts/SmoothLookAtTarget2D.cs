@@ -6,6 +6,12 @@ using UnityEngine;
         public Transform target;
         public float smoothing = 5.0f;
         public float adjustmentAngle = 0.0f;
+
+    private void Start()
+    {
+        smoothing = Random.Range(0.5f, 7f);
+    }
+
         private void Update()
         {
             if (target != null)

@@ -14,7 +14,7 @@ public class TimerEvent : MonoBehaviour {
         if (!isSpawning)
         {
             isSpawning = true;
-            float time = Random.Range(0.5f, 5.0f);
+            float time = Random.Range(0.1f, 4.5f);
             Invoke("OnTimerComplete", time);
         }
     }

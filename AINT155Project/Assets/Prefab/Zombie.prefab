@@ -176,7 +176,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  health: 10
+  health: 100
 --- !u!114 &114093507679734968
 MonoBehaviour:
   m_ObjectHideFlags: 1

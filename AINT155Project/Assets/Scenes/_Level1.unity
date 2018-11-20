@@ -4953,7 +4953,9 @@ MonoBehaviour:
   RoundOneZombies: 25
   multiplier: 0
   ZombiesLeft: 0
-  delay: 0.25
+  ZombiesToSpawn: 0
+  delay: 0.1
+  roundResetDelay: 5
 --- !u!4 &1573333189
 Transform:
   m_ObjectHideFlags: 0

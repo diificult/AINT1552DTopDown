@@ -9,12 +9,52 @@ public class SpawnerController : MonoBehaviour {
     public int RoundOneZombies = 25;
     public int multiplier;
     public int ZombiesLeft;
-    public float delay;
+    public int ZombiesToSpawn;
+   
+    public float delay = 0.25f;
+    public float roundResetDelay = 5f;
     private bool wait;
+    private int round = 1;
+    private int Spawner;
 
-     void Start()
+    void Start()
     {
-        ZombiesLeft = RoundOneZombies;
+        StartCoroutine("Round");
+    }
+
+    IEnumerable Round()
+    {
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        StartCoroutine("ZombiesCalcuation");
+        round++;
+        yield return new WaitForSeconds(roundResetDelay);
+        StartCoroutine("Round");
+    }
+
+    IEnumerable ZombiesCalcuation()
+    {
+        ZombiesToSpawn = ZombiesLeft;
+        if (ZombiesLeft > 12)
+        {
+            ZombiesToSpawn = Random.Range(6, ZombiesLeft / 2);
+        }
+        Spawner = Random.Range(0, 4);
+        StartCoroutine("SpawnZombies");
+        yield return new WaitForSeconds(0f);
+        if (ZombiesLeft > 0) StartCoroutine("ZombiesCalcuation");
+    }
+
+    IEnumerable SpawnZombies()
+    {
+        spawners[Spawner].transform.SendMessage("Spawn");
+        ZombiesLeft--;
+        ZombiesToSpawn--;
+        yield return new WaitForSeconds(delay);
+        if (ZombiesToSpawn > 0) StartCoroutine("SpawnZombies");
+    }
+
+
+        /*
         while (ZombiesLeft > 0)
         {
             int ZombiesToSpawn = ZombiesLeft;
@@ -36,13 +76,10 @@ public class SpawnerController : MonoBehaviour {
                 }
             }
         }
-    }
+        */
+    
 
-    void DelayedSpawn(int index)
-    {
-        wait = false;
-    }
-
+    
 
 
 }
