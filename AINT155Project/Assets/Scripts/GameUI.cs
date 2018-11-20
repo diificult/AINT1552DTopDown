@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour {
     public Slider HealthBar;
     public Text ScoreText;
+    public Text KillsText;
 
-    public int PlayerScore = 0;
+    private int Kills = 0;
+    private int PlayerScore = 0;
     
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
         AddScore.OnSendScore += UpdateScore;
+        AddScore.OnSendKill += UpdateKill;
 
     }
 
@@ -20,6 +23,7 @@ public class GameUI : MonoBehaviour {
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
         AddScore.OnSendScore -= UpdateScore;
+        AddScore.OnSendKill -= UpdateKill;
     }
 
     private void UpdateHealthBar(int health)
@@ -31,6 +35,12 @@ public class GameUI : MonoBehaviour {
     {
         PlayerScore += score;
         ScoreText.text = PlayerScore.ToString();
+    }
+
+    private void UpdateKill()
+    {
+        Kills++;
+        KillsText.text = Kills.ToString()  + " Kills";
     }
 
 }

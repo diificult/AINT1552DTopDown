@@ -7,11 +7,12 @@ public class HurtTrigger : MonoBehaviour {
     public int damage;
     public float resetTime = 0.25f;
 
-    private void OnTiggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
         GetComponent<Collider2D>().enabled = false;
         Invoke("ResetTrigger", resetTime);
+        print("Trigger Entered");
     }
 
     private void ResetTrigger()
