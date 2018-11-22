@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/_Level1.unity
-    guid: 31a922ded08e6ea4eb70c4475f7423c8
-  - enabled: 1
     path: Assets/Scenes/_MainMenu.unity
     guid: 5d877b0caa2f04345a93edd862dc419b
+  - enabled: 1
+    path: Assets/Scenes/_Level1.unity
+    guid: 31a922ded08e6ea4eb70c4475f7423c8
   - enabled: 1
     path: Assets/Scenes/_GameOver.unity
     guid: e9a96c126614ef8489f3338125262b21

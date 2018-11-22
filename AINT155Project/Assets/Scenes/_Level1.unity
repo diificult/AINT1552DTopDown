@@ -2603,16 +2603,6 @@ Prefab:
       propertyPath: m_Name
       value: ZombieSpawner_S
       objectReference: {fileID: 0}
-    - target: {fileID: 114862450903684984, guid: 735dea4dea88de54293a3c782ca01808,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212034636337637680, guid: 735dea4dea88de54293a3c782ca01808,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 735dea4dea88de54293a3c782ca01808, type: 2}
   m_IsPrefabParent: 0
@@ -4940,7 +4930,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1573333187}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c61d713db7b64f34ba618bd0c2c3e04e, type: 3}
   m_Name: 
@@ -5027,16 +5017,6 @@ Prefab:
       propertyPath: m_Name
       value: ZombieSpawner_W
       objectReference: {fileID: 0}
-    - target: {fileID: 114862450903684984, guid: 735dea4dea88de54293a3c782ca01808,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212034636337637680, guid: 735dea4dea88de54293a3c782ca01808,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 735dea4dea88de54293a3c782ca01808, type: 2}
   m_IsPrefabParent: 0
@@ -5082,11 +5062,6 @@ Prefab:
     - target: {fileID: 1127798538999934, guid: 735dea4dea88de54293a3c782ca01808, type: 2}
       propertyPath: m_Name
       value: ZombieSpawner_N
-      objectReference: {fileID: 0}
-    - target: {fileID: 212034636337637680, guid: 735dea4dea88de54293a3c782ca01808,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 735dea4dea88de54293a3c782ca01808, type: 2}
