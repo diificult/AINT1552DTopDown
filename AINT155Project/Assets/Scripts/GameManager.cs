@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame()
     {
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("_GameOver");
     }
 

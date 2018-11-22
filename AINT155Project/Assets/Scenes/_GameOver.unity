@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Return To Main Menu
 --- !u!222 &183861080
 CanvasRenderer:
   m_ObjectHideFlags: 0

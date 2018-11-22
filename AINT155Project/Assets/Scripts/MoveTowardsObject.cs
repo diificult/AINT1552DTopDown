@@ -6,7 +6,7 @@ public class MoveTowardsObject : MonoBehaviour {
 
     public Transform target;
     public float speed = 5.0f;
-    private void Update()
+    private void FixedUpdate()
     {
         if (target != null)
         {
@@ -15,7 +15,7 @@ public class MoveTowardsObject : MonoBehaviour {
     }
     private void Start()
     {
-        speed = Random.Range(4f, 7f);
+        speed = Random.Range(2f, 5.5f);
     }
     public void SetTarget(Transform newTarget)
     {

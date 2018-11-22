@@ -2606,7 +2606,7 @@ Prefab:
     - target: {fileID: 114862450903684984, guid: 735dea4dea88de54293a3c782ca01808,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212034636337637680, guid: 735dea4dea88de54293a3c782ca01808,
         type: 2}
@@ -4940,7 +4940,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1573333187}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c61d713db7b64f34ba618bd0c2c3e04e, type: 3}
   m_Name: 
@@ -4956,6 +4956,7 @@ MonoBehaviour:
   ZombiesToSpawn: 0
   delay: 0.1
   roundResetDelay: 5
+  SpawnerScript: {fileID: 0}
 --- !u!4 &1573333189
 Transform:
   m_ObjectHideFlags: 0
@@ -5029,7 +5030,7 @@ Prefab:
     - target: {fileID: 114862450903684984, guid: 735dea4dea88de54293a3c782ca01808,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212034636337637680, guid: 735dea4dea88de54293a3c782ca01808,
         type: 2}

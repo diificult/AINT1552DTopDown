@@ -17,6 +17,8 @@ public class SpawnerController : MonoBehaviour {
     private int round = 1;
     private int Spawner;
 
+    public Spawner SpawnerScript;
+
     void Start()
     {
         StartCoroutine("Round");
@@ -46,7 +48,7 @@ public class SpawnerController : MonoBehaviour {
 
     IEnumerable SpawnZombies()
     {
-        spawners[Spawner].transform.SendMessage("Spawn");
+        spawners[Spawner].SendMessage("Spawn");
         ZombiesLeft--;
         ZombiesToSpawn--;
         yield return new WaitForSeconds(delay);
