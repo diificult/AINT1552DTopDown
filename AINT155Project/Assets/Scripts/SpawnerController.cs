@@ -21,11 +21,18 @@ public class SpawnerController : MonoBehaviour {
 
     void Start()
     {
+        StartRounds();
+    }
+
+    public void StartRounds()
+    {
+        print("RANSR");
         StartCoroutine("Round");
     }
 
     IEnumerable Round()
     {
+        print("RANR");
         ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
         StartCoroutine("ZombiesCalcuation");
         round++;
@@ -35,7 +42,9 @@ public class SpawnerController : MonoBehaviour {
 
     IEnumerable ZombiesCalcuation()
     {
-        ZombiesToSpawn = ZombiesLeft;
+        print("RANZC");
+
+       ZombiesToSpawn = ZombiesLeft;
         if (ZombiesLeft > 12)
         {
             ZombiesToSpawn = Random.Range(6, ZombiesLeft / 2);
@@ -48,7 +57,9 @@ public class SpawnerController : MonoBehaviour {
 
     IEnumerable SpawnZombies()
     {
+        print("RanSZ21");
         spawners[Spawner].SendMessage("Spawn");
+        print("RanSZ2");
         ZombiesLeft--;
         ZombiesToSpawn--;
         yield return new WaitForSeconds(delay);
