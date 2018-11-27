@@ -19,6 +19,9 @@ public class AddScore : MonoBehaviour {
             OnSendScore(KillScore);
             OnSendKill();
         }
+
+        transform.parent.SendMessage("ZombieKilled");
+
     }
 
     public void OnDamaged()

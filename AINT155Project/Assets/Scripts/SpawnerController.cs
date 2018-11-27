@@ -10,39 +10,62 @@ public class SpawnerController : MonoBehaviour {
     public int multiplier;
     public int ZombiesLeft;
     public int ZombiesToSpawn;
+    public int zombiesAlive = 0;
    
-    public float delay = 0.25f;
-    public float roundResetDelay = 5f;
+    public float delay = 5f;
+    public float roundResetDelay = 30f;
     private bool wait;
     private int round = 1;
     private int Spawner;
 
     public Spawner SpawnerScript;
 
-    void Start()
+    void Awake()
     {
         StartRounds();
     }
 
     public void StartRounds()
     {
-        print("RANSR");
-        StartCoroutine("Round");
+        //       print("RANSR");
+        //StartCoroutine("Round");
+        ZombiesLeft = 3;
+        zombiesAlive = 0;
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        StartCoroutine(StartRound());
     }
 
-    IEnumerable Round()
+
+    IEnumerator StartRound()
     {
-        print("RANR");
+        Spawner = Random.Range(0, 4);
+        spawners[Spawner].SendMessage("Spawn");
+        zombiesAlive++;
+
+        yield return new WaitForSeconds(1);
+        print("round 1 complete");
+
+        ZombiesLeft--;
+
+        if (ZombiesLeft > 0)
+        {
+            StartCoroutine(StartRound());
+        }
+    }
+
+    IEnumerator Round()
+    {
+    //    print("RAN Round");
         ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
         StartCoroutine("ZombiesCalcuation");
-        round++;
-        yield return new WaitForSeconds(roundResetDelay);
-        StartCoroutine("Round");
+        round++;    
+        yield return new WaitForSecondsRealtime(roundResetDelay);
+       // StartCoroutine("Round");
     }
 
-    IEnumerable ZombiesCalcuation()
+    IEnumerator ZombiesCalcuation()
     {
-        print("RANZC");
+        print("RAN ZombieCalulation");
 
        ZombiesToSpawn = ZombiesLeft;
         if (ZombiesLeft > 12)
@@ -51,19 +74,38 @@ public class SpawnerController : MonoBehaviour {
         }
         Spawner = Random.Range(0, 4);
         StartCoroutine("SpawnZombies");
-        yield return new WaitForSeconds(0f);
-        if (ZombiesLeft > 0) StartCoroutine("ZombiesCalcuation");
+        
+        if (ZombiesLeft > 0)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+            StartCoroutine("ZombiesCalcuation");
+            
+        }
     }
-
-    IEnumerable SpawnZombies()
+    
+    IEnumerator SpawnZombies()
     {
-        print("RanSZ21");
+        //print("Ran SZ1");
         spawners[Spawner].SendMessage("Spawn");
-        print("RanSZ2");
+     //   print("Ran SZ2");
         ZombiesLeft--;
         ZombiesToSpawn--;
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
         if (ZombiesToSpawn > 0) StartCoroutine("SpawnZombies");
+    }
+
+    public void ZombieKilled()
+    {
+        // total alive --
+        zombiesAlive--;
+
+        if (zombiesAlive <= 0)
+        {
+            StartCoroutine(StartRound());
+            print("level won");
+        }
+
+        
     }
 
 
