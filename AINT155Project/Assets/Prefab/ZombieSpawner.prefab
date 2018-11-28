@@ -37,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127798538999934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.51, y: -4.02, z: 10.53436}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.030972, y: 0.025969505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,6 +83,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1298946597294116, guid: 07e6efa5393f24b4da67c8c4801aaa4f,
     type: 2}
   adjustmentAngle: 0
+  spawnerParent: {fileID: 0}
 --- !u!114 &114862450903684984
 MonoBehaviour:
   m_ObjectHideFlags: 1

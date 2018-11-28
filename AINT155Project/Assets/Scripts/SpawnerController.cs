@@ -32,31 +32,37 @@ public class SpawnerController : MonoBehaviour {
         ZombiesLeft = 3;
         zombiesAlive = 0;
         ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
-        StartCoroutine(StartRound());
+        StartCoroutine(SpawnTheZombies());
     }
 
+    IEnumerator StartNewRound()
+    {
+        round++;
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        yield return new WaitForSeconds(15);
+        StartCoroutine(SpawnTheZombies());
+    }
 
-    IEnumerator StartRound()
+    IEnumerator SpawnTheZombies()
     {
         Spawner = Random.Range(0, 4);
         spawners[Spawner].SendMessage("Spawn");
         zombiesAlive++;
 
         yield return new WaitForSeconds(1);
-        print("round 1 complete");
 
         ZombiesLeft--;
 
         if (ZombiesLeft > 0)
         {
-            StartCoroutine(StartRound());
+            StartCoroutine(SpawnTheZombies());
         }
     }
 
     IEnumerator Round()
     {
     //    print("RAN Round");
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 2);
         StartCoroutine("ZombiesCalcuation");
         round++;    
         yield return new WaitForSecondsRealtime(roundResetDelay);
@@ -96,13 +102,13 @@ public class SpawnerController : MonoBehaviour {
 
     public void ZombieKilled()
     {
-        // total alive --
         zombiesAlive--;
 
-        if (zombiesAlive <= 0)
+        if (zombiesAlive <= 0 && ZombiesLeft <= 0)
         {
-            StartCoroutine(StartRound());
             print("level won");
+            StartCoroutine(StartNewRound());
+            
         }
 
         
