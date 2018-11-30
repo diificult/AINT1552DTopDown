@@ -49,7 +49,7 @@ public class SpawnerController : MonoBehaviour {
         spawners[Spawner].SendMessage("Spawn");
         zombiesAlive++;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         ZombiesLeft--;
 

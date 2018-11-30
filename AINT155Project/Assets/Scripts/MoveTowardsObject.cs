@@ -15,7 +15,7 @@ public class MoveTowardsObject : MonoBehaviour {
     }
     private void Start()
     {
-        speed = Random.Range(2f, 5.5f);
+        speed = Random.Range(4f, 7f);
     }
     public void SetTarget(Transform newTarget)
     {
