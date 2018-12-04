@@ -6,6 +6,7 @@ TextureImporter:
     21300002: UIElements_1
     21300004: UIElements_2
     21300006: UIElements_3
+    21300008: UIElements_4
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -165,13 +166,33 @@ TextureImporter:
         width: 253
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ee4886a7c584bf74ab20c06aa6ca9208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElements_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 256
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda88923729be4941944b73ece003728
       vertices: []
       indices: 
       edges: []

@@ -8,6 +8,7 @@ public class GameUI : MonoBehaviour {
     public Slider ShieldBar;    
     public Text ScoreText;
     public Text KillsText;
+    public Text RoundText;
 
     private int Kills = 0;
     private int PlayerScore = 0;
@@ -16,17 +17,20 @@ public class GameUI : MonoBehaviour {
     {
         Player.OnUpdateHealth += UpdateHealthBar;
         Player.OnUpdateShield += UpdateShieldBar;
+        Player.OnSendScore += UpdateScore;
         AddScore.OnSendScore += UpdateScore;
         AddScore.OnSendKill += UpdateKill;
-
+        SpawnerController.OnSendRound += UpdateRound;
     }
 
     private void OnDisable()
     {
         Player.OnUpdateHealth -= UpdateHealthBar;
         Player.OnUpdateShield -= UpdateShieldBar;
+        Player.OnSendScore -= UpdateScore;
         AddScore.OnSendScore -= UpdateScore;
         AddScore.OnSendKill -= UpdateKill;
+        SpawnerController.OnSendRound -= UpdateRound;
     }
 
     private void UpdateHealthBar(int health)
@@ -43,6 +47,11 @@ public class GameUI : MonoBehaviour {
     {
         PlayerScore += score;
         ScoreText.text = PlayerScore.ToString();
+    }
+
+    private void UpdateRound(int round)
+    {
+        RoundText.text = "Round " + round;
     }
 
     private void UpdateKill()

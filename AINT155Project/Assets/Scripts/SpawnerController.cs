@@ -13,13 +13,16 @@ public class SpawnerController : MonoBehaviour {
     public int zombiesAlive = 0;
    
     public float delay = 5f;
-    public float roundResetDelay = 30f;
+    public float roundResetDelay = 5f;
     private bool wait;
     private int round = 1;
     private int Spawner;
 
-    public Spawner SpawnerScript;
+    public Light mainLight;
+    public Light torch;
 
+    public delegate void SendRound(int round);
+    public static event SendRound OnSendRound;
     void Awake()
     {
         StartRounds();
@@ -31,14 +34,38 @@ public class SpawnerController : MonoBehaviour {
         //StartCoroutine("Round");
         ZombiesLeft = 3;
         zombiesAlive = 0;
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) );
         StartCoroutine(SpawnTheZombies());
     }
 
     IEnumerator StartNewRound()
     {
         round++;
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        OnSendRound(round);
+        if (round == 2)
+        {
+            mainLight.intensity = 0f;
+            yield return new WaitForSeconds(0.1f);
+            mainLight.intensity = 0.31f;
+            yield return new WaitForSeconds(0.3f);
+            mainLight.intensity = 0f;
+            yield return new WaitForSeconds(0.2f);
+            mainLight.intensity = 0.31f;
+            yield return new WaitForSeconds(0.9f);
+            mainLight.intensity = 0f;
+            yield return new WaitForSeconds(1f);
+            mainLight.intensity = 0.31f;
+            yield return new WaitForSeconds(0.4f);
+            mainLight.intensity = 0f;
+            yield return new WaitForSeconds(1f);
+            torch.enabled = true;
+        }
+        if (round == 3)
+        {
+            mainLight.intensity = 0.55f;
+            torch.enabled = false;  
+        }
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) );
         yield return new WaitForSeconds(15);
         StartCoroutine(SpawnTheZombies());
     }

@@ -37,7 +37,8 @@ public enum PickupType
     Damage,
     Invincible,
     AttackSpeed,
-    MoveSpeed
+    MoveSpeed,
+    CoinGold
 }
 
 public class Pickup : MonoBehaviour
@@ -58,6 +59,8 @@ public class Pickup : MonoBehaviour
      */ 
     public int health = 10;
 
+    public delegate void SendScore(int score);
+    public static event SendScore OnSendScore;
 
     /*
      * OnTriggerEnter2D
@@ -119,6 +122,10 @@ public class Pickup : MonoBehaviour
              */
             case PickupType.MoveSpeed:
                 other.gameObject.AddComponent<SpeedBooster>();
+                break;
+
+            case PickupType.CoinGold:
+                other.transform.SendMessage("PickupCoin", 10, SendMessageOptions.DontRequireReceiver);
                 break;
 
             default:

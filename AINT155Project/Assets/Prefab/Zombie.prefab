@@ -256,6 +256,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 1382028876249560, guid: d4a2218fa18ecb44aac742039ac8afd9,
     type: 2}
   adjustmentAngle: 90
+  spawnerParent: {fileID: 0}
 --- !u!114 &114882638282413208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,7 +296,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7aa9b8cb55dc0984d8c006ddbb120a21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

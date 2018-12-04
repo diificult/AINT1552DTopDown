@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     public static event UpdateHealth OnUpdateHealth;
     public delegate void UpdateShield(int newShield);
     public static event UpdateShield OnUpdateShield;
+    public delegate void SendScore(int score);
+    public static event SendScore OnSendScore;
 
     private Animator gunAnim;
     private void Start()
@@ -77,5 +79,10 @@ public class Player : MonoBehaviour {
         {
             onDie.Invoke();
         }
+    }
+    public void PickupCoin(int score)
+    {
+        print(OnSendScore == null);
+        OnSendScore(score);
     }
     }
