@@ -299,7 +299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -68.900024, y: -112.79999}
+  m_AnchoredPosition: {x: 99, y: -114.3}
   m_SizeDelta: {x: 224.6, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32605696
@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 163756549}
   - component: {fileID: 163756551}
   - component: {fileID: 163756550}
+  - component: {fileID: 163756552}
   m_Layer: 5
   m_Name: Kills Background
   m_TagString: Untagged
@@ -537,7 +538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -68.9, y: -159}
+  m_AnchoredPosition: {x: 99, y: -163}
   m_SizeDelta: {x: 224.6, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163756550
@@ -573,6 +574,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 163756548}
+--- !u!114 &163756552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163756548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9c1881832bb2043ae701d79568e97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KBg: {fileID: 0}
+  SBg: {fileID: 0}
 --- !u!1 &176092668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3459,7 @@ GameObject:
   - component: {fileID: 802109036}
   - component: {fileID: 802109038}
   - component: {fileID: 802109037}
+  - component: {fileID: 802109039}
   m_Layer: 5
   m_Name: Round Background
   m_TagString: Untagged
@@ -3468,7 +3483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -68.69995, y: -65}
+  m_AnchoredPosition: {x: -68.900024, y: -63.184998}
   m_SizeDelta: {x: 224.6, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802109037
@@ -3504,6 +3519,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802109035}
+--- !u!114 &802109039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802109035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9c1881832bb2043ae701d79568e97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KBg: {fileID: 0}
+  SBg: {fileID: 0}
 --- !u!1 &829535710
 GameObject:
   m_ObjectHideFlags: 0
