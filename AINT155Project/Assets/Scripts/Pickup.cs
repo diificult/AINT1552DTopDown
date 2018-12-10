@@ -121,7 +121,7 @@ public class Pickup : MonoBehaviour
              * the SpeedBooster component will handle itself from there
              */
             case PickupType.MoveSpeed:
-                other.gameObject.AddComponent<SpeedBooster>();
+                other.transform.SendMessage("StartSpeedBoost", SendMessageOptions.DontRequireReceiver);
                 break;
 
             case PickupType.CoinGold:

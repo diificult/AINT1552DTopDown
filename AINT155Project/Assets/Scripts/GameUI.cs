@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour {
     public Text ScoreText;
     public Text KillsText;
     public Text RoundText;
+    public Text RoundCompleteText;
 
     private int Kills = 0;
     private int PlayerScore = 0;
@@ -52,6 +53,14 @@ public class GameUI : MonoBehaviour {
     private void UpdateRound(int round)
     {
         RoundText.text = "Round " + round;
+        RoundCompleteText.text = "Round " + round + " Defeated!";
+        RoundCompleteText.enabled = true;
+        Invoke("DisableText", 5f);
+    }
+    void DisableText()
+    {
+        // RoundCompleteText.text = "";
+        RoundCompleteText.enabled = false;
     }
 
     private void UpdateKill()

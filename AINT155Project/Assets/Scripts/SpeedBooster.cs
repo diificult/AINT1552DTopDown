@@ -42,7 +42,7 @@ public class SpeedBooster : MonoBehaviour
      * speedIncrease
      * the amount to increase the move speed by
      */
-    private float speedIncrease = 5;
+    private float speedIncrease = 12;
 
     /*
      * oldSpeed

@@ -15,10 +15,6 @@ public class Weapon : MonoBehaviour {
     {
         isFiring = false;
     }
-    private void Start()
-    {
-        
-    }
 
     private void Fire()
     {
@@ -26,7 +22,7 @@ public class Weapon : MonoBehaviour {
         Instantiate(bulletPrefab, bulletSpawn1.position, bulletSpawn1.rotation);
         bulletFire1.enabled = true;
         GetComponent<AudioSource>().Play();
-        Invoke("TurnOffLight", 0.3f);
+        Invoke("TurnOffLight", 0.1f);
         Invoke("SetFiring", fireTime);
     }
 
