@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 32605697}
   - component: {fileID: 32605696}
   - component: {fileID: 32605698}
+  - component: {fileID: 32605699}
   m_Layer: 5
   m_Name: ScoreBackground
   m_TagString: Untagged
@@ -347,6 +348,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cff7341b376b034ea316c367b466abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &32605699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32605694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f837682e8cbfb684c8d2abf539adae92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &45714564
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,8 +483,8 @@ GameObject:
   - component: {fileID: 163756549}
   - component: {fileID: 163756551}
   - component: {fileID: 163756550}
-  - component: {fileID: 163756552}
   - component: {fileID: 163756553}
+  - component: {fileID: 163756554}
   m_Layer: 5
   m_Name: Kills Background
   m_TagString: Untagged
@@ -525,17 +544,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 163756548}
---- !u!114 &163756552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 163756548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9c1881832bb2043ae701d79568e97a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &163756553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +555,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cff7341b376b034ea316c367b466abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &163756554
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163756548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 654f53476e73f9241a491797419b2ea0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &176092668
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1921452563}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &349428178
 TilemapCollider2D:
@@ -2960,8 +2986,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.6
-  m_Range: 50
+  m_Intensity: 0.8
+  m_Range: 75
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3111,7 +3137,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 668362845
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fbcab5a4656aa2449e135f7d7e7cc96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3542,7 +3568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1921452563}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &928642938
 TilemapRenderer:
@@ -5838,9 +5864,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1942834990}
   - {fileID: 349428177}
   - {fileID: 928642937}
+  - {fileID: 1942834990}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5900,7 +5926,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1921452563}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1942834991
 TilemapRenderer:

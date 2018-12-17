@@ -7,23 +7,27 @@ public class TabButton : MonoBehaviour {
     float timeOfTravel = 0.1f;
     float currentTime = 0;
     float normalizedValue;
+    private bool isTabbed;
+    private Animator tabAnim;
 
     // Update is called once per frame
 
     void Start()
     {
-        
+        tabAnim = GetComponent<Animator>();
+
         // rectTransform = GetComponent<RectTransform>();
     }
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-              StartCoroutine(LerpObjectOut());
+            tabAnim.SetBool("isTabbed",   true);
+
         }
         if (Input.GetKeyUp(KeyCode.Tab))
         {
-            StartCoroutine(LerpObjectIn());
+            tabAnim.SetBool("isTabbed", false);
         }
     }
     
