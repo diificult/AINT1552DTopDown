@@ -38,7 +38,8 @@ public enum PickupType
     Invincible,
     AttackSpeed,
     MoveSpeed,
-    CoinGold
+    CoinGold,
+    CoinRainbow
 }
 
 public class Pickup : MonoBehaviour
@@ -58,9 +59,24 @@ public class Pickup : MonoBehaviour
      * the value is the amount of health to add to the player HealthSystem
      */ 
     public int health = 10;
+    public float lifetime = 5f;
+
 
     public delegate void SendScore(int score);
     public static event SendScore OnSendScore;
+    
+
+    public void Start()
+    {
+        Invoke("EndLife",  lifetime);
+   //     Print("Elc");
+    }
+
+    public void EndLife()
+    {
+        Print("Elg");
+  //      Destroy(gameObject);
+    }
 
     /*
      * OnTriggerEnter2D
@@ -68,6 +84,8 @@ public class Pickup : MonoBehaviour
      * we use a switch statement to choose which pickup to use
      * we destroy this GameObject to remove it from the scene
      */
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         /*
@@ -125,7 +143,10 @@ public class Pickup : MonoBehaviour
                 break;
 
             case PickupType.CoinGold:
-                other.transform.SendMessage("PickupCoin", 10, SendMessageOptions.DontRequireReceiver);
+                other.transform.SendMessage("PickupCoin", 15, SendMessageOptions.DontRequireReceiver);
+                break;
+            case PickupType.CoinRainbow:
+                other.transform.SendMessage("PickupCoin", 25, SendMessageOptions.DontRequireReceiver);
                 break;
 
             default:
@@ -139,4 +160,6 @@ public class Pickup : MonoBehaviour
          */
         Destroy(gameObject);
     }
+
+    
 }

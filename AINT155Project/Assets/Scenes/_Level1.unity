@@ -2923,6 +2923,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 212540727931401024, guid: 94509d313b1b96a4d9785a5163143764,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300014, guid: 1c03e8c80d1c30d4db48a60c7c58c421,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94509d313b1b96a4d9785a5163143764, type: 2}
   m_IsPrefabParent: 0
@@ -4933,8 +4939,8 @@ GameObject:
   - component: {fileID: 1348727257}
   - component: {fileID: 1348727256}
   - component: {fileID: 1348727255}
-  m_Layer: 0
-  m_Name: Entity_0
+  m_Layer: 15
+  m_Name: Coin_Rainbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4949,7 +4955,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4966,8 +4972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad660350151c454fb94a31c40404342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupType: 0
+  pickupType: 6
   health: 10
+  lifetime: 20
 --- !u!212 &1348727257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5020,7 +5027,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348727254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 11.21, y: 9.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
