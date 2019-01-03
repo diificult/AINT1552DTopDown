@@ -38,6 +38,8 @@ public enum PickupType
     Invincible,
     AttackSpeed,
     MoveSpeed,
+    CoinBronze,
+    CoinSilver,
     CoinGold,
     CoinRainbow
 }
@@ -74,8 +76,8 @@ public class Pickup : MonoBehaviour
 
     public void EndLife()
     {
-        Print("Elg");
-  //      Destroy(gameObject);
+        //Print("Elg");
+        Destroy(gameObject);
     }
 
     /*
@@ -142,6 +144,12 @@ public class Pickup : MonoBehaviour
                 other.transform.SendMessage("StartSpeedBoost", SendMessageOptions.DontRequireReceiver);
                 break;
 
+            case PickupType.CoinBronze:
+                other.transform.SendMessage("PickupCoin", 5, SendMessageOptions.DontRequireReceiver);
+                break;
+            case PickupType.CoinSilver:
+                other.transform.SendMessage("PickupCoin", 10, SendMessageOptions.DontRequireReceiver);
+                break;
             case PickupType.CoinGold:
                 other.transform.SendMessage("PickupCoin", 15, SendMessageOptions.DontRequireReceiver);
                 break;
