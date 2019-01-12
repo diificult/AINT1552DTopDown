@@ -11,6 +11,7 @@ public class SpawnerController : MonoBehaviour {
     public int ZombiesLeft;
     public int ZombiesToSpawn;
     public int zombiesAlive = 0;
+    public int kills=0;
    
     public float delay = 5f;
     public float roundResetDelay = 5f;
@@ -23,6 +24,12 @@ public class SpawnerController : MonoBehaviour {
 
     public delegate void SendRound(int round);
     public static event SendRound OnSendRound;
+
+    public int GetKills()
+    {
+        return kills;
+    }
+
     void Awake()
     {
         StartRounds();
@@ -34,7 +41,7 @@ public class SpawnerController : MonoBehaviour {
         //StartCoroutine("Round");
         ZombiesLeft = 3;
         zombiesAlive = 0;
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) );
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
         StartCoroutine(SpawnTheZombies());
     }
 
@@ -130,6 +137,7 @@ public class SpawnerController : MonoBehaviour {
     public void ZombieKilled()
     {
         zombiesAlive--;
+        //kills++;
 
         if (zombiesAlive <= 0 && ZombiesLeft <= 0)
         {
@@ -140,34 +148,6 @@ public class SpawnerController : MonoBehaviour {
 
         
     }
-
-
-        /*
-        while (ZombiesLeft > 0)
-        {
-            int ZombiesToSpawn = ZombiesLeft;
-            if (ZombiesLeft > 12)
-            {
-
-                ZombiesToSpawn = Random.Range(6, ZombiesLeft / 2);
-            }
-
-            int Spawner = Random.Range(0, 4);
-            while (ZombiesToSpawn > 0) {
-                if (!wait)
-                {
-               //     spawners[Spawner].transform.SendMessage("Spawn");
-                    wait = true;
-                    Invoke("DelayedSpawn", delay);
-                    ZombiesLeft--;
-                    ZombiesToSpawn--;
-                }
-            }
-        }
-        */
-    
-
-    
 
 
 }

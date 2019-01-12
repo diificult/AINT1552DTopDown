@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114675937111900232}
   - component: {fileID: 114541738297878744}
   - component: {fileID: 114882638282413208}
+  - component: {fileID: 114748971284106358}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -137,6 +138,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114675937111900232}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114748971284106358}
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -257,6 +269,24 @@ MonoBehaviour:
     type: 2}
   adjustmentAngle: 90
   spawnerParent: {fileID: 0}
+--- !u!114 &114748971284106358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1d50e78fc01eb43ad5ac7dd6059835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins:
+  - {fileID: 1456272973001664, guid: 289dca4e0fd32704087470d5b5ead92a, type: 2}
+  - {fileID: 1225294245773352, guid: 1f39ef3ab32c31c47a0b6cc452fb7014, type: 2}
+  - {fileID: 1860924990462234, guid: f4e738b71f7ba674e963ef624aa8d046, type: 2}
+  - {fileID: 1531626518166574, guid: 0fdf78bd7052bf74ba78c78cab88ccb4, type: 2}
+  - {fileID: 1799664410742272, guid: 1fa8ba9d2ae5261458359bf5370f5892, type: 2}
+  adjustmentAngle: 0
 --- !u!114 &114882638282413208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,7 +344,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1809107639
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cce8f5ed5a297244aa1af5d559e313d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

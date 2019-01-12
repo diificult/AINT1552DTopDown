@@ -41,6 +41,7 @@ public enum PickupType
     CoinBronze,
     CoinSilver,
     CoinGold,
+    CoinDiamond,
     CoinRainbow
 }
 
@@ -64,8 +65,8 @@ public class Pickup : MonoBehaviour
     public float lifetime = 5f;
 
 
-    public delegate void SendScore(int score);
-    public static event SendScore OnSendScore;
+   // public delegate void SendScore(int score);
+   // public static event SendScore OnSendScore;
     
 
     public void Start()
@@ -153,8 +154,11 @@ public class Pickup : MonoBehaviour
             case PickupType.CoinGold:
                 other.transform.SendMessage("PickupCoin", 15, SendMessageOptions.DontRequireReceiver);
                 break;
+            case PickupType.CoinDiamond:
+                other.transform.SendMessage("PickupCoin", 20, SendMessageOptions.DontRequireReceiver);
+                break;
             case PickupType.CoinRainbow:
-                other.transform.SendMessage("PickupCoin", 25, SendMessageOptions.DontRequireReceiver);
+                other.transform.SendMessage("PickupCoin", 35, SendMessageOptions.DontRequireReceiver);
                 break;
 
             default:

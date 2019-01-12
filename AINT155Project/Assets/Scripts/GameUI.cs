@@ -11,7 +11,7 @@ public class GameUI : MonoBehaviour {
     public Text RoundText;
     public Text RoundCompleteText;
 
-    private int Kills = 0;
+    public int Kills = 0;
     private int PlayerScore = 0;
     
     private void OnEnable()
