@@ -82,7 +82,6 @@ public class Player : MonoBehaviour {
     }
     public void PickupCoin(int score)
     {
-        print(OnSendScore == null);
         OnSendScore(score);
     }
     }

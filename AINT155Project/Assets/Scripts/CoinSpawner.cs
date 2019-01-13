@@ -8,9 +8,9 @@ public class CoinSpawner : MonoBehaviour {
     public float adjustmentAngle = 0;
     public int GetKills()
     {
-        GameObject ZombieSpawner = GameObject.Find("SpawnerController");
-        SpawnerController sc = ZombieSpawner.GetComponent<SpawnerController>();
-        return sc.GetKills();
+        GameObject ZombieSpawner = GameObject.Find("Canvas");
+        GameUI ui = ZombieSpawner.GetComponent<GameUI>();
+        return ui.GetKills();
     }
 
     //public GameObject ZombieSpawner;
@@ -27,25 +27,28 @@ public class CoinSpawner : MonoBehaviour {
         if (kills % 2 == 0) 
         {
             
-            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(-0.5f, 0.5f),  0);
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f),  0);
             Instantiate(Coins[0], SpawnLocation, rotationInRadians);
         }
         if (kills % 3 == 0)
         {
-            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(-0.5f, 0.5f), 0);
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
             Instantiate(Coins[1], SpawnLocation, rotationInRadians);
         }
         if (kills % 5 == 0)
         {
-            Instantiate(Coins[2], transform.position, rotationInRadians);
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
+            Instantiate(Coins[2], SpawnLocation, rotationInRadians);
         }
         if (kills % 8 == 0)
         {
-            Instantiate(Coins[3], transform.position, rotationInRadians);
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
+            Instantiate(Coins[3], SpawnLocation, rotationInRadians);
         }
         if (kills % 16 == 0)
         {
-            Instantiate(Coins[4], transform.position, rotationInRadians);
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
+            Instantiate(Coins[4], SpawnLocation, rotationInRadians);
         }
         //Instantiate(prefabToSpawn, transform.position, rotationInRadians, spawnerParent);
     }

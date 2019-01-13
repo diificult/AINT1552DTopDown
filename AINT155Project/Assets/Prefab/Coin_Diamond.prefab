@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupType: 0
   health: 10
-  lifetime: 5
+  lifetime: 20
 --- !u!212 &212988643479533718
 SpriteRenderer:
   m_ObjectHideFlags: 1

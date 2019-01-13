@@ -72,7 +72,7 @@ public class SpawnerController : MonoBehaviour {
             mainLight.intensity = 0.55f;
             torch.enabled = false;  
         }
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) );
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) +25);
         yield return new WaitForSeconds(15);
         StartCoroutine(SpawnTheZombies());
     }

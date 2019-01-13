@@ -14,6 +14,11 @@ public class GameUI : MonoBehaviour {
     public int Kills = 0;
     private int PlayerScore = 0;
     
+    public int GetKills()
+    {
+        return Kills;
+    }
+
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
