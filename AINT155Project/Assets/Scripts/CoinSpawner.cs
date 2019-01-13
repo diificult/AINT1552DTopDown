@@ -10,7 +10,7 @@ public class CoinSpawner : MonoBehaviour {
     {
         GameObject ZombieSpawner = GameObject.Find("Canvas");
         GameUI ui = ZombieSpawner.GetComponent<GameUI>();
-        return ui.GetKills();
+        return ui.GetKills()++;
     }
 
     //public GameObject ZombieSpawner;
@@ -45,7 +45,7 @@ public class CoinSpawner : MonoBehaviour {
             Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
             Instantiate(Coins[3], SpawnLocation, rotationInRadians);
         }
-        if (kills % 16 == 0)
+        if (kills % 22 == 0)
         {
             Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
             Instantiate(Coins[4], SpawnLocation, rotationInRadians);

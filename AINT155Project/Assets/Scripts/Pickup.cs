@@ -71,7 +71,7 @@ public class Pickup : MonoBehaviour
 
     public void Start()
     {
-        Invoke("EndLife",  lifetime);
+        Invoke("EndLife",  lifetime-3);
    //     Print("Elc");
     }
 
@@ -79,6 +79,11 @@ public class Pickup : MonoBehaviour
     {
         //Print("Elg");
         Destroy(gameObject);
+    }
+
+    IEnumerator EndPickupLife()
+    {
+        yield new 
     }
 
     /*
