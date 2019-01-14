@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Events;
+
 
 [System.Serializable]
 public class EnemySpawnedEvent : UnityEvent<Transform> { }
@@ -12,5 +13,6 @@ public class Enemy : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
         onSpawn.Invoke(player.transform);
-    }
+    }
+
 }

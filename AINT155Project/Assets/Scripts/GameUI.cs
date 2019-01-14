@@ -10,9 +10,13 @@ public class GameUI : MonoBehaviour {
     public Text KillsText;
     public Text RoundText;
     public Text RoundCompleteText;
+    public Text PartsText;
+    public Text FoodText;
 
+    public int ZombieParts = 0;
     public int Kills = 0;
     private int PlayerScore = 0;
+    public int Food=0;
     
     public int GetKills()
     {
@@ -27,6 +31,9 @@ public class GameUI : MonoBehaviour {
         AddScore.OnSendScore += UpdateScore;
         AddScore.OnSendKill += UpdateKill;
         SpawnerController.OnSendRound += UpdateRound;
+        Player.OnSendParts += UpdateZombiePart;
+        FoodScript.OnSendParts += UpdateZombiePart;
+        FoodScript.OnSendFood += UpdateFood;
     }
 
     private void OnDisable()
@@ -37,6 +44,21 @@ public class GameUI : MonoBehaviour {
         AddScore.OnSendScore -= UpdateScore;
         AddScore.OnSendKill -= UpdateKill;
         SpawnerController.OnSendRound -= UpdateRound;
+        Player.OnSendParts -= UpdateZombiePart;
+        FoodScript.OnSendParts -= UpdateZombiePart;
+        FoodScript.OnSendFood -= UpdateFood;
+    }
+
+    private  void UpdateFood(int amount)
+    {
+        Food += amount;
+        FoodText.text = Food.ToString();
+    }
+
+    private void UpdateZombiePart(int amount)
+    {
+        ZombieParts = ZombieParts + amount;
+        PartsText.text = ZombieParts.ToString();
     }
 
     private void UpdateHealthBar(int health)
@@ -58,13 +80,32 @@ public class GameUI : MonoBehaviour {
     private void UpdateRound(int round)
     {
         RoundText.text = "Round " + round;
-        RoundCompleteText.text = "Round " + round + " Defeated!";
+        string DisplayWinText = "Round " + (round-1) + " Defeated!";
+        StartCoroutine(UpdateRoundText(DisplayWinText));
         RoundCompleteText.enabled = true;
-        Invoke("DisableText", 5f);
+        StartCoroutine(DisableText());
     }
-    void DisableText()
+
+    IEnumerator UpdateRoundText(string text) {
+        char[] TextCharArray = text.ToCharArray();
+        string DisplayedText = "";
+        foreach (char character in TextCharArray)
+        {
+            DisplayedText += character;
+            RoundCompleteText.text = DisplayedText;
+            yield return new WaitForSeconds(0.06f);
+        }
+    }
+    IEnumerator DisableText()
     {
-        // RoundCompleteText.text = "";
+        yield return new WaitForSeconds(5f);
+        string DisplayedText = RoundCompleteText.text;
+        for (int i = DisplayedText.Length -1  ; i > 0; i--)
+        {
+            DisplayedText = DisplayedText.Remove(i);
+            RoundCompleteText.text = DisplayedText;
+            yield return new WaitForSeconds(0.06f);
+        }
         RoundCompleteText.enabled = false;
     }
 

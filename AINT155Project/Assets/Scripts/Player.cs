@@ -11,6 +11,9 @@ public class Player : MonoBehaviour {
     public static event UpdateShield OnUpdateShield;
     public delegate void SendScore(int score);
     public static event SendScore OnSendScore;
+    public delegate void UpdateZombiePart(int amount);
+    public static event UpdateZombiePart OnSendParts;
+
 
     private Animator gunAnim;
     private void Start()
@@ -34,7 +37,6 @@ public class Player : MonoBehaviour {
         if (OnUpdateHealth != null)
         {
             OnUpdateHealth(health);
-      //      OnUpdateShield(shield);
         }
     }
 
@@ -80,8 +82,24 @@ public class Player : MonoBehaviour {
             onDie.Invoke();
         }
     }
+
+    public void Heal(int healing)
+    {
+        health += healing;
+        OnUpdateHealth(health);
+        if (health > 100)
+        {
+            health -=  (health - 100);
+        }
+
+    }
+
     public void PickupCoin(int score)
     {
         OnSendScore(score);
+    }
+    public void PickupZombiePart()
+    {
+        OnSendParts(1);
     }
     }

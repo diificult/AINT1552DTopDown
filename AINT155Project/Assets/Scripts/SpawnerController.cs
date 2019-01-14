@@ -11,7 +11,6 @@ public class SpawnerController : MonoBehaviour {
     public int ZombiesLeft;
     public int ZombiesToSpawn;
     public int zombiesAlive = 0;
-    public int kills=0;
    
     public float delay = 5f;
     public float roundResetDelay = 5f;
@@ -25,9 +24,9 @@ public class SpawnerController : MonoBehaviour {
     public delegate void SendRound(int round);
     public static event SendRound OnSendRound;
 
-    public int GetKills()
+    public int GetRound()
     {
-        return kills;
+        return round;
     }
 
     void Awake()

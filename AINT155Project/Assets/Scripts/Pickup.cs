@@ -20,7 +20,8 @@
  *   
  * 
  **********************************************************/
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -42,7 +43,8 @@ public enum PickupType
     CoinSilver,
     CoinGold,
     CoinDiamond,
-    CoinRainbow
+    CoinRainbow,
+    ZombiePart
 }
 
 public class Pickup : MonoBehaviour
@@ -71,19 +73,49 @@ public class Pickup : MonoBehaviour
 
     public void Start()
     {
-        Invoke("EndLife",  lifetime-3);
+        Invoke("EndLife",  lifetime-5);
    //     Print("Elc");
     }
 
     public void EndLife()
     {
         //Print("Elg");
-        Destroy(gameObject);
+        
+        StartCoroutine(EndPickupLife());
     }
 
     IEnumerator EndPickupLife()
     {
-        yield new 
+        SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+        yield return new WaitForSeconds(lifetime - 5f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(1f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(1f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.25f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(0.25f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.25f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(0.25f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.20f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(0.20f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.20f);
+        sr.enabled = true;
+        yield return new WaitForSeconds(0.20f);
+        sr.enabled = false;
+        yield return new WaitForSeconds(0.20f);
+        Destroy(gameObject);
+
     }
 
     /*
@@ -165,7 +197,9 @@ public class Pickup : MonoBehaviour
             case PickupType.CoinRainbow:
                 other.transform.SendMessage("PickupCoin", 35, SendMessageOptions.DontRequireReceiver);
                 break;
-
+            case PickupType.ZombiePart:
+                other.transform.SendMessage("PickupZombiePart", SendMessageOptions.DontRequireReceiver);
+                break;
             default:
                 break;
         }

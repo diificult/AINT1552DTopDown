@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114675937111900232}
   - component: {fileID: 114541738297878744}
   - component: {fileID: 114882638282413208}
-  - component: {fileID: 114748971284106358}
+  - component: {fileID: 114372478211525366}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -92,9 +92,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.11}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.36
 --- !u!58 &58908919381687794
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114748971284106358}
+      - m_Target: {fileID: 114372478211525366}
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -216,6 +216,25 @@ MonoBehaviour:
   target: {fileID: 0}
   smoothing: 5
   adjustmentAngle: -90
+--- !u!114 &114372478211525366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1d50e78fc01eb43ad5ac7dd6059835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 1456272973001664, guid: 289dca4e0fd32704087470d5b5ead92a, type: 2}
+  - {fileID: 1225294245773352, guid: 1f39ef3ab32c31c47a0b6cc452fb7014, type: 2}
+  - {fileID: 1860924990462234, guid: f4e738b71f7ba674e963ef624aa8d046, type: 2}
+  - {fileID: 1531626518166574, guid: 0fdf78bd7052bf74ba78c78cab88ccb4, type: 2}
+  - {fileID: 1419948741783960, guid: 8b7f1456a6b39d849b3c18617bfd914b, type: 2}
+  - {fileID: 1196676572103886, guid: aa421ceff0fc9ed4d96bf50163fb476f, type: 2}
+  adjustmentAngle: 0
 --- !u!114 &114541738297878744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,24 +288,6 @@ MonoBehaviour:
     type: 2}
   adjustmentAngle: 90
   spawnerParent: {fileID: 0}
---- !u!114 &114748971284106358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298946597294116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1d50e78fc01eb43ad5ac7dd6059835, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Coins:
-  - {fileID: 1456272973001664, guid: 289dca4e0fd32704087470d5b5ead92a, type: 2}
-  - {fileID: 1225294245773352, guid: 1f39ef3ab32c31c47a0b6cc452fb7014, type: 2}
-  - {fileID: 1860924990462234, guid: f4e738b71f7ba674e963ef624aa8d046, type: 2}
-  - {fileID: 1531626518166574, guid: 0fdf78bd7052bf74ba78c78cab88ccb4, type: 2}
-  - {fileID: 1419948741783960, guid: 8b7f1456a6b39d849b3c18617bfd914b, type: 2}
-  adjustmentAngle: 0
 --- !u!114 &114882638282413208
 MonoBehaviour:
   m_ObjectHideFlags: 1
