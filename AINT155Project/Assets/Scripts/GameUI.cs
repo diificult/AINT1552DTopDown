@@ -23,6 +23,17 @@ public class GameUI : MonoBehaviour {
         return Kills;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (RoundCompleteText.enabled = true)
+            {
+                StartCoroutine(DisableText());
+            }
+        }
+    }
+
     private void OnEnable()
     {
         Player.OnUpdateHealth += UpdateHealthBar;
@@ -84,23 +95,33 @@ public class GameUI : MonoBehaviour {
         StartCoroutine(UpdateRoundText(DisplayWinText));
         RoundCompleteText.enabled = true;
         StartCoroutine(DisableText());
+       // StartCoroutine(UpdateRoundText("Press R to continue to the next round"));
+        //RoundCompleteText.enabled = true;
+        
     }
 
     IEnumerator UpdateRoundText(string text) {
         char[] TextCharArray = text.ToCharArray();
         string DisplayedText = "";
+        bool EndEarly = false;
         foreach (char character in TextCharArray)
         {
+            if (Input.GetKey(KeyCode.R))
+            {
+                EndEarly = true;
+                break;
+            }
             DisplayedText += character;
             RoundCompleteText.text = DisplayedText;
             yield return new WaitForSeconds(0.06f);
         }
+        if (!EndEarly) yield return new WaitForSeconds(5f);
     }
     IEnumerator DisableText()
     {
-        yield return new WaitForSeconds(5f);
+        
         string DisplayedText = RoundCompleteText.text;
-        for (int i = DisplayedText.Length -1  ; i > 0; i--)
+        for (int i = DisplayedText.Length -1  ; i >= 0; i--)
         {
             DisplayedText = DisplayedText.Remove(i);
             RoundCompleteText.text = DisplayedText;

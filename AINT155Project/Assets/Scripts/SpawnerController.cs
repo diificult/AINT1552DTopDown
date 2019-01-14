@@ -40,7 +40,7 @@ public class SpawnerController : MonoBehaviour {
         //StartCoroutine("Round");
         ZombiesLeft = 3;
         zombiesAlive = 0;
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f));
         StartCoroutine(SpawnTheZombies());
     }
 
@@ -71,7 +71,7 @@ public class SpawnerController : MonoBehaviour {
             mainLight.intensity = 0.55f;
             torch.enabled = false;  
         }
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) +25);
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) );
         yield return new WaitForSeconds(15);
         StartCoroutine(SpawnTheZombies());
     }
@@ -95,7 +95,7 @@ public class SpawnerController : MonoBehaviour {
     IEnumerator Round()
     {
     //    print("RAN Round");
-        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 2);
+        ZombiesLeft = Mathf.RoundToInt(5 * Mathf.Pow(round, 1.6f) + 25);
         StartCoroutine("ZombiesCalcuation");
         round++;    
         yield return new WaitForSecondsRealtime(roundResetDelay);

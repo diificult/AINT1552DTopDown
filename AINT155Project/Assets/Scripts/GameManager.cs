@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame()
     {
+        PlayerPrefs.SetInt("First", 2);
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("_GameOver");
     }

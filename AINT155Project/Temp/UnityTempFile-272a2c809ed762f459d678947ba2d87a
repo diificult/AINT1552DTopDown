@@ -2,8 +2,15 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp/Cinemachine.dll
+-out:Temp/Assembly-CSharp.dll
 -nostdlib
+-r:Library/ScriptAssemblies/Cinemachine.dll
+-r:Library/ScriptAssemblies/AstarPathfindingProject.dll
+-r:Library/ScriptAssemblies/PackageToolsEditor.dll
+-r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:Library/ScriptAssemblies/AstarPathfindingProjectEditor.dll
+-r:Library/ScriptAssemblies/com.unity.cinemachine.editor.dll
 -r:"C:\Program Files\Unity1.18\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -65,32 +72,16 @@
 -r:"C:\Program Files\Unity1.18\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\Managed/Unity.Locator.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 -r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/Managed/UnityEditor.Graphs.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
--r:"C:/Program Files/Unity1.18/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll
--r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll
 -r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
--r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
 -r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll
--r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/Editor/UnityEditor.Purchasing.dll
 -r:C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
--r:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll"
 -r:"C:\Program Files\Unity1.18\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll"
@@ -195,66 +186,31 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/AssemblyInfo.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineBlendListCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineBrain.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineClearShot.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineCollider.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineConfiner.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineDollyCart.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineExternalCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineFollowZoom.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineFreeLook.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineMixingCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachinePath.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachinePipeline.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineSmoothPath.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineStateDrivenCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineStoryboard.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineTargetGroup.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Behaviours/CinemachineVirtualCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineComposer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineFramingTransposer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineGroupComposer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineHardLockToTarget.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineHardLookAt.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineOrbitalTransposer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachinePOV.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineSameAsFollowTarget.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineTrackedDolly.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Components/CinemachineTransposer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/AxisState.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CameraState.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineBlend.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineBlenderSettings.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineComponentBase.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineCore.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineDebug.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineExtension.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachinePathBase.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachinePropertyAttribute.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineTouchInputMapper.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/CinemachineVirtualCameraBase.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/GaussianFilter.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/ICinemachineCamera.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/ICinemachineComponent.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/LensSettings.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/NoiseSettings.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/Predictor.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/RuntimeUtility.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/SignalSourceAsset.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/SplineHelpers.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/UnityVectorExtensions.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Core/UpdateTracker.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/EventHelpers/CinemachineTriggerAction.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineCollisionImpulseSource.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineFixedSignal.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineImpulseDefinition.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineImpulseListener.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineImpulseManager.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Impulse/CinemachineImpulseSource.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Timeline/CinemachineMixer.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Timeline/CinemachineShot.cs
-C:/Users/OwenWork/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.cinemachine@2.2.7/Runtime/Timeline/CinemachineTrack.cs
+Assets/Scripts/AddScore.cs
+Assets/Scripts/AttackSpeed.cs
+Assets/Scripts/Bullet.cs
+Assets/Scripts/DamageIncrease.cs
+Assets/Scripts/DestroyOnDie.cs
+Assets/Scripts/Enemy.cs
+Assets/Scripts/FoodScript.cs
+Assets/Scripts/GameManager.cs
+Assets/Scripts/GameUI.cs
+Assets/Scripts/HealthPickup.cs
+Assets/Scripts/HealthSystem.cs
+Assets/Scripts/HurtTrigger.cs
+Assets/Scripts/Invincible.cs
+Assets/Scripts/ItemSpawner.cs
+Assets/Scripts/MouseControl2D.cs
+Assets/Scripts/MoveTowardsObject.cs
+Assets/Scripts/Pickup.cs
+Assets/Scripts/Player.cs
+Assets/Scripts/SmoothFollow2D.cs
+Assets/Scripts/SmoothLookAtTarget2D.cs
+Assets/Scripts/Spawner.cs
+Assets/Scripts/SpawnerController.cs
+Assets/Scripts/SpeedBooster.cs
+Assets/Scripts/TabButton.cs
+Assets/Scripts/TimerEvent.cs
+Assets/Scripts/TopDownCharacterController2D.cs
+Assets/Scripts/Weapon.cs
 -lib:"C:\Program Files\Unity1.18\Editor\Data\MonoBleedingEdge\lib\mono\unity"
