@@ -22,6 +22,10 @@ public class GameUI : MonoBehaviour {
     {
         return Kills;
     }
+    public int GetScore()
+    {
+        return PlayerScore;
+    }
 
     void Update()
     {
