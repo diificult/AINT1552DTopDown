@@ -12,11 +12,15 @@ public class GameUI : MonoBehaviour {
     public Text RoundCompleteText;
     public Text PartsText;
     public Text FoodText;
+    public SpawnerController SC;
 
     public int ZombieParts = 0;
     public int Kills = 0;
     private int PlayerScore = 0;
     public int Food=0;
+
+
+    private bool EndRound = false;
     
     public int GetKills()
     {
@@ -31,9 +35,11 @@ public class GameUI : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (RoundCompleteText.enabled = true)
+            if (EndRound)
             {
                 StartCoroutine(DisableText());
+                EndRound = false;
+                SC.StartNextRound();
             }
         }
     }
@@ -95,31 +101,30 @@ public class GameUI : MonoBehaviour {
     private void UpdateRound(int round)
     {
         RoundText.text = "Round " + round;
+        StartCoroutine(PostRound(round));
+     
+    }
+    IEnumerator  PostRound(int round)
+        {
         string DisplayWinText = "Round " + (round-1) + " Defeated!";
         StartCoroutine(UpdateRoundText(DisplayWinText));
         RoundCompleteText.enabled = true;
+        yield return new WaitForSeconds(5f);
         StartCoroutine(DisableText());
-       // StartCoroutine(UpdateRoundText("Press R to continue to the next round"));
-        //RoundCompleteText.enabled = true;
-        
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(UpdateRoundText("Press R to continue to the next round"));
+        yield return new WaitForSeconds(1f);
+        EndRound = true;
     }
-
     IEnumerator UpdateRoundText(string text) {
         char[] TextCharArray = text.ToCharArray();
         string DisplayedText = "";
-        bool EndEarly = false;
         foreach (char character in TextCharArray)
         {
-            if (Input.GetKey(KeyCode.R))
-            {
-                EndEarly = true;
-                break;
-            }
             DisplayedText += character;
             RoundCompleteText.text = DisplayedText;
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(0.03f);
         }
-        if (!EndEarly) yield return new WaitForSeconds(5f);
     }
     IEnumerator DisableText()
     {
@@ -129,10 +134,12 @@ public class GameUI : MonoBehaviour {
         {
             DisplayedText = DisplayedText.Remove(i);
             RoundCompleteText.text = DisplayedText;
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(0.03f);
         }
-        RoundCompleteText.enabled = false;
     }
+
+    
+
 
     private void UpdateKill()
     {

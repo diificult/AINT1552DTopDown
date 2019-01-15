@@ -40,12 +40,14 @@ GameObject:
   - component: {fileID: 58908919381687794}
   - component: {fileID: 114048625987255632}
   - component: {fileID: 114989180248773054}
-  - component: {fileID: 114093507679734968}
-  - component: {fileID: 114281852822984834}
   - component: {fileID: 114675937111900232}
   - component: {fileID: 114541738297878744}
   - component: {fileID: 114882638282413208}
   - component: {fileID: 114372478211525366}
+  - component: {fileID: 114462428784686730}
+  - component: {fileID: 114977465053966322}
+  - component: {fileID: 114188045350390134}
+  - component: {fileID: 114480587784310120}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -189,7 +191,7 @@ MonoBehaviour:
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   health: 100
---- !u!114 &114093507679734968
+--- !u!114 &114188045350390134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -197,25 +199,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298946597294116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796c8d0b534a18d4f97434385f3560e5, type: 3}
+  m_Script: {fileID: 11500000, guid: cb6a34d769a1e4ac7b0b30e433aa443c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 3
---- !u!114 &114281852822984834
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298946597294116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39f92a9a66311441a78096d19b007b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  smoothing: 5
-  adjustmentAngle: -90
+  version: 1
+  smoothType: 0
+  subdivisions: 2
+  iterations: 2
+  strength: 0.5
+  uniformLength: 0
+  maxSegmentLength: 2
+  bezierTangentLength: 0.4
+  offset: 0.2
+  factor: 0.1
 --- !u!114 &114372478211525366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +231,45 @@ MonoBehaviour:
   - {fileID: 1419948741783960, guid: 8b7f1456a6b39d849b3c18617bfd914b, type: 2}
   - {fileID: 1196676572103886, guid: aa421ceff0fc9ed4d96bf50163fb476f, type: 2}
   adjustmentAngle: 0
+--- !u!114 &114462428784686730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &114480587784310120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972b81eb0ac691c458685b72a0463311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &114541738297878744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,18 +284,7 @@ MonoBehaviour:
   onSpawn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114093507679734968}
-        m_MethodName: SetTarget
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114281852822984834}
+      - m_Target: {fileID: 114480587784310120}
         m_MethodName: SetTarget
         m_Mode: 0
         m_Arguments:
@@ -299,6 +323,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5d0b3426d96904ab74e26125099898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114977465053966322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298946597294116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  speed: 3
+  orientation: 1
+  enableRotation: 1
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+  targetCompatibility: {fileID: 0}
 --- !u!114 &114989180248773054
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,24 +25,52 @@ public class GameManager : MonoBehaviour {
         Score = ui.GetScore();
         if (Score >  PlayerPrefs.GetInt("First"))
         {
+            PlayerPrefs.SetString("FifthName", PlayerPrefs.GetString("FourthName"));
             PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
+            PlayerPrefs.SetString("FourthName", PlayerPrefs.GetString("ThirdName"));
+            PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
+            PlayerPrefs.SetString("ThirdName", PlayerPrefs.GetString("SecondName"));
+            PlayerPrefs.SetInt("Third", PlayerPrefs.GetInt("Second"));
+            PlayerPrefs.SetString("SecondName", PlayerPrefs.GetString("FirstName"));
+            PlayerPrefs.SetInt("Second", PlayerPrefs.GetInt("First"));
             PlayerPrefs.SetInt("First", Score);
+            PlayerPrefs.SetString("FirstName", "PLAYER");
             Position = "First";
 
         } else  if (Score > PlayerPrefs.GetInt("Second"))
         {
+            PlayerPrefs.SetString("FifthName", PlayerPrefs.GetString("FourthName"));
+            PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
+            PlayerPrefs.SetString("FourthName", PlayerPrefs.GetString("ThirdName"));
+            PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
+            PlayerPrefs.SetString("ThirdName", PlayerPrefs.GetString("SecondName"));
+            PlayerPrefs.SetInt("Third", PlayerPrefs.GetInt("Second"));
             Position = "Second";
+            PlayerPrefs.SetInt("Second", Score);
+            PlayerPrefs.SetString("SecondName", "PLAYER");
         }
         else if (Score > PlayerPrefs.GetInt("Third"))
         {
+            PlayerPrefs.SetString("FifthName", PlayerPrefs.GetString("FourthName"));
+            PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
+            PlayerPrefs.SetString("FourthName", PlayerPrefs.GetString("ThirdName"));
+            PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
+            PlayerPrefs.SetInt("Third", Score);
+            PlayerPrefs.SetString("ThirdName", "PLAYER");
             Position = "Third";
         }
         else if (Score > PlayerPrefs.GetInt("Fourth"))
         {
+            PlayerPrefs.SetString("FifthName", PlayerPrefs.GetString("FourthName"));
+            PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
+            PlayerPrefs.SetInt("Fourth", Score);
+            PlayerPrefs.SetString("FourthName", "PLAYER");
             Position = "Fourth";
         }
         else if (Score > PlayerPrefs.GetInt("Fifth"))
         {
+            PlayerPrefs.SetInt("Fifth", Score);
+            PlayerPrefs.SetString("FifthName", "PLAYER");
             Position = "Fifth";
         }
         if (Position != "")
@@ -58,7 +86,7 @@ public class GameManager : MonoBehaviour {
     {
         if (Position != "")
         {
-            PlayerPrefs.SetInt(Position + "Name", System.Convert.ToInt32(Name.text));
+            PlayerPrefs.SetString(Position + "Name", Name.text);
         }
         SceneManager.LoadScene("_MainMenu");
     }
