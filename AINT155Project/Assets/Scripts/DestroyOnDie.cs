@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DestroyOnDie : MonoBehaviour {
 
-	// Use this for initialization
+    public float dieTime = 0;
+
 	public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, dieTime);
     }
 }
