@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad660350151c454fb94a31c40404342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupType: 4
+  pickupType: 3
   health: 10
   lifetime: 15
 --- !u!212 &212367673945289946

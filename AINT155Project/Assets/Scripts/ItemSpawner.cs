@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour {
 
     public GameObject[] Items =  new GameObject[6];
+    public GameObject[] Powerups = new GameObject[2];
     public float adjustmentAngle = 0;
     
     public int GetKills()
@@ -89,6 +90,17 @@ public class ItemSpawner : MonoBehaviour {
                 Instantiate(Items[5], SpawnLocation, rotationInRadians);
             }
         }
+        int RandomNumber = Random.Range(1, 100);
+        if (RandomNumber == 45)
+        {
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
+            Instantiate(Powerups[0], SpawnLocation, rotationInRadians);
+        } if (RandomNumber ==  67)
+        {
+            Vector3 SpawnLocation = new Vector3(transform.position.x - Random.Range(-0.75f, 0.75f), transform.position.y + Random.Range(-0.75f, 0.75f), 0);
+            Instantiate(Powerups[1], SpawnLocation, rotationInRadians);
+        }
+
         //Instantiate(prefabToSpawn, transform.position, rotationInRadians, spawnerParent);
     }
 }

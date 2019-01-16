@@ -20,6 +20,7 @@ public class SpawnerController : MonoBehaviour {
     public Light mainLight;
     public Light torch;
 
+  
     public delegate void SendRound(int round);
     public static event SendRound OnSendRound;
 
@@ -50,7 +51,7 @@ public class SpawnerController : MonoBehaviour {
     IEnumerator StartNewRound()
     {
         
-        if (round % 3 == 0)
+        if (round % 4 == 0)
         {
             mainLight.intensity = 0f;
             yield return new WaitForSeconds(0.1f);
@@ -81,25 +82,11 @@ public class SpawnerController : MonoBehaviour {
     IEnumerator SpawnTheZombies()
     {
         Spawner = Random.Range(0, 4);
-        int ZombiesToSpawn = ZombiesLeft;
-        if (ZombiesLeft > 12  && ZombiesLeft < 30)
-        {
-            ZombiesToSpawn = Random.Range(6, ZombiesLeft / 2);
-        }
-        if (ZombiesLeft > 50 && ZombiesLeft < 80) 
-        {
-            ZombiesToSpawn = Random.Range(8, ZombiesLeft / 4);
-        }
-        if (ZombiesLeft > 80)
-        {
-            ZombiesToSpawn = Random.Range(10, ZombiesLeft / 6);
-        }
-        spawners[Spawner].SendMessage("Spawn",  ZombiesToSpawn);
-        zombiesAlive += ZombiesToSpawn;
-        ZombiesLeft -= ZombiesToSpawn;
-        yield return new WaitForSeconds(5f);
-
-        
+        spawners[Spawner].SendMessage("Spawn");
+        zombiesAlive ++;
+        ZombiesLeft --;
+        float wait = 0.5f / round;
+        yield return new WaitForSeconds(wait);
 
         if (ZombiesLeft > 0)
         {

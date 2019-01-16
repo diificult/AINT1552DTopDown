@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopDownCharacterController2D : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class TopDownCharacterController2D : MonoBehaviour {
     public float NormalSpeed = 7.0f;
     public float sprintSpeed = 10f;
     public float SpeedBoostDuration = 20f;
+
+    public Image SpeedBoostIcon;
 
     Rigidbody2D rigidbody2D;
     public int StartStamina = 50;
@@ -57,11 +60,13 @@ public class TopDownCharacterController2D : MonoBehaviour {
     {
         NormalSpeed = 10f;
         sprintSpeed = 12f;
+        SpeedBoostIcon.GetComponent<Image>().enabled = true;
         Invoke("EndSpeedBoost", SpeedBoostDuration);
     }
 
     public void EndSpeedBoost()
     {
+        SpeedBoostIcon.GetComponent<Image>().enabled = false;
         NormalSpeed = 7f;
         sprintSpeed = 10f;
 

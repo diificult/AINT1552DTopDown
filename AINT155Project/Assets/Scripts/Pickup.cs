@@ -36,9 +36,9 @@ public enum PickupType
 {
     Health,
     Damage,
-    Invincible,
     AttackSpeed,
     MoveSpeed,
+    MachineGun,
     CoinBronze,
     CoinSilver,
     CoinGold,
@@ -155,14 +155,6 @@ public class Pickup : MonoBehaviour
                 other.gameObject.AddComponent<DamageIncrease>();
                 break;
 
-            /*
-             * INVINCIBLE
-             * we use AddComponent to add the Invincible component to the player GameObject
-             * the Invincible component will handle itself from there
-             */
-            case PickupType.Invincible:
-                other.gameObject.AddComponent<Invincible>();
-                break;
 
             /*
              * ATTACK SPEED
@@ -180,6 +172,11 @@ public class Pickup : MonoBehaviour
              */
             case PickupType.MoveSpeed:
                 other.transform.SendMessage("StartSpeedBoost", SendMessageOptions.DontRequireReceiver);
+                break;
+
+            case PickupType.MachineGun:
+                other.gameObject.AddComponent<DamageIncrease>();
+
                 break;
 
             case PickupType.CoinBronze:

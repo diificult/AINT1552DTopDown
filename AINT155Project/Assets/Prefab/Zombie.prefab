@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2b4955a6a6a4b498fafc8f86e66234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   resetTime: 0.4
 --- !u!114 &114048625987255632
 MonoBehaviour:
@@ -230,6 +230,9 @@ MonoBehaviour:
   - {fileID: 1531626518166574, guid: 0fdf78bd7052bf74ba78c78cab88ccb4, type: 2}
   - {fileID: 1419948741783960, guid: 8b7f1456a6b39d849b3c18617bfd914b, type: 2}
   - {fileID: 1196676572103886, guid: aa421ceff0fc9ed4d96bf50163fb476f, type: 2}
+  Powerups:
+  - {fileID: 1316499148189182, guid: 94509d313b1b96a4d9785a5163143764, type: 2}
+  - {fileID: 1138173509669230, guid: ecd64ab21076b5f4b8b713e819bb8f33, type: 2}
   adjustmentAngle: 0
 --- !u!114 &114462428784686730
 MonoBehaviour:

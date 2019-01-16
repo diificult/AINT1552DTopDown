@@ -29,6 +29,7 @@
  * 
  **********************************************************/
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageIncrease : MonoBehaviour
 {
@@ -36,15 +37,14 @@ public class DamageIncrease : MonoBehaviour
      * time
      * the total time the pickup is active in seconds
      */
-    private float time = 5;
+    private float time = 15f;
 
     /*
      * oldPrefab
      * stores the original bullet prefab on the player weapon
      */ 
     private GameObject oldPrefab;
-
-
+    
     /*
      * Start
      * see link: https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html
@@ -76,13 +76,15 @@ public class DamageIncrease : MonoBehaviour
          * see link: https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html
          */
         transform.GetComponentInChildren<Weapon>().bulletPrefab = Resources.Load("Bullet Damage increase") as GameObject;
+        GetComponent<Weapon>().ShowWeaponPowerup();
 
         /*
          * SET A TIMER TO SWAP BULLETS BACK AGAIN
          * set an Invoke timer to call the "TimeOut" method
          * TimeOut will swap the high damage bullet for the original bullet
-         */ 
+         */
         Invoke("TimeOut", time);
+        
     }
 
 
@@ -104,12 +106,12 @@ public class DamageIncrease : MonoBehaviour
          * see link: https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html
          */
         transform.GetComponentInChildren<Weapon>().bulletPrefab = oldPrefab;
-
+        GetComponent<Weapon>().HideWeaponPowerup();
         /*
          * DESTROY THIS COMPONENT
          * here we remove this component (DamageIncrease) from the player GameObject
          * NOTE: we use "this" in the Destroy method to destroy "this" component (DamageIncrease)
-         */ 
+         */
         Destroy(this);
     }
 }

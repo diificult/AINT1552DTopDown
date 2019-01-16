@@ -11,7 +11,7 @@ public class HealthSystem : MonoBehaviour {
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
 
-    public int health = 100;
+    public int health = 85;
 
     public void TakeDamage(int damage)
     {

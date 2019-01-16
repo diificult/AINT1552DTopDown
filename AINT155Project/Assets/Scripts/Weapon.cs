@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class Weapon : MonoBehaviour {
     public Light bulletFire1;
 
     private bool isFiring = false;
+
+    public Image DamageIcon;
 
     private void SetFiring()
     {
@@ -22,8 +25,18 @@ public class Weapon : MonoBehaviour {
         Instantiate(bulletPrefab, bulletSpawn1.position, bulletSpawn1.rotation);
         bulletFire1.enabled = true;
         GetComponent<AudioSource>().Play();
-        Invoke("TurnOffLight", 0.1f);
+        Invoke("TurnOffLight", fireTime);
         Invoke("SetFiring", fireTime);
+    }
+
+    public void ShowWeaponPowerup()
+    {
+        DamageIcon.GetComponent<Image>().enabled = true;
+    }
+
+    public void HideWeaponPowerup()
+    {
+        DamageIcon.GetComponent<Image>().enabled = false ;
     }
 
     private void TurnOffLight()

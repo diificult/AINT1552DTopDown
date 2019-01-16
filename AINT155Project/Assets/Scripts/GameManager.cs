@@ -17,6 +17,14 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene("_Level1");
     }
+    public string GetPosition()
+    {
+        return Position;
+    }
+    public int GetScore()
+    {
+        return Score;
+    }
 
     public void EndGame()
     {
